@@ -1,0 +1,61 @@
+:root {
+    --verde-escuro: #4a5d4e;
+    --verde-suave: #8ea885;
+    --terracota: #b07d62;
+    --creme-claro: #fdfaf5;
+    --dourado-velho: #c5a16f;
+    --texto: #2d2d2d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+    background-color: #fff;
+    scroll-behavior: smooth;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: bold; color: var(--verde-escuro); }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--texto); font-size: 0.9rem; }
+
+.hero { background-color: var(--creme-claro); padding: 80px 0; }
+.flex-row { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+.hero-image { flex: 1; min-width: 300px; }
+.hero-image img { width: 100%; border-radius: 30px; box-shadow: 15px 15px 0px var(--verde-suave); }
+
+.hero-text { flex: 1; min-width: 300px; }
+.hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--verde-escuro); margin: 15px 0; }
+.badge { color: var(--terracota); font-weight: 600; letter-spacing: 2px; font-size: 0.8rem; }
+
+.btn-primary { 
+    display: inline-block; padding: 15px 40px; background: var(--verde-escuro); 
+    color: #fff; text-decoration: none; border-radius: 5px; margin-top: 25px; transition: 0.3s;
+}
+.btn-primary:hover { background: var(--terracota); }
+
+.quote-section { padding: 80px 0; }
+.quote-box { display: flex; align-items: center; background: var(--creme-claro); border-radius: 20px; overflow: hidden; }
+.quote-img { width: 40%; height: auto; }
+.quote-content { padding: 40px; }
+
+.footer { text-align: center; padding: 60px 0; background: #fff; }
+.footer-logo { max-width: 180px; margin-bottom: 20px; }
+.copyright { font-size: 0.8rem; color: #999; }
+
+@media (max-width: 768px) {
+    .flex-row, .quote-box { flex-direction: column; text-align: center; }
+    .quote-img { width: 100%; }
+}
